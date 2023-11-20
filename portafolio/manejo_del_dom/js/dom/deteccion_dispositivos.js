@@ -57,7 +57,7 @@ export default function userDeviceInfo(id) {
         $id.innerHTML += `<p><mark>Este contenido solo se ve en firefox</mark></p>`
     }
     // //REDIRECCIONAMIENTO
-    if (isMobile.android()) {
-        window.location.href = "https://www.youtube.com/watch?v=6kSw096En04";
-    }
+    // if (isMobile.android()) {
+    //     window.location.href = "";
+    // }
 }
