@@ -1,5 +1,5 @@
 
-export default function visibleOculto() {
+export function visibleOculto() {
     const BtnOcultar = document.getElementById("BtnOcultar");
     const elemento = document.getElementById("mostrar-ocultar");
 
@@ -10,4 +10,8 @@ export default function visibleOculto() {
             elemento.classList.add("hidden");
         }
     });
+}
+
+export function ocultar(classn) {
+    document.querySelectorAll(classn).forEach((elem) => { elem.style.display = 'none' });
 }

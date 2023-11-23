@@ -470,9 +470,9 @@ body {
   }
 }
 
-@media screen and (max-height: 820px) {
+@media screen and (max-height: 875px) {
   .menu a {
-    padding: 0.7rem;
+    padding: 0.6rem;
   }
 }
 @media screen and (max-height: 740px) {
@@ -488,6 +488,16 @@ body {
 @media screen and (max-height: 580px) {
   .menu a {
     padding: 0.25rem;
+  }
+}
+@media screen and (max-height: 530px) {
+  .menu a {
+    padding: 0.1rem;
+  }
+}
+@media screen and (max-height: 461px) {
+  .menu a {
+    padding: 0rem;
   }
 }
 /* *ContactForm Validations  *************************************************************/

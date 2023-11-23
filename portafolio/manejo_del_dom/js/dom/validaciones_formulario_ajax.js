@@ -1,6 +1,6 @@
 const d = document;
 
-export default function contactFormValidations() {
+export default function contactFormAjax() {
     const $form = d.querySelector(".contact-form"),
         $inputs = d.querySelectorAll(".contact-form [required]") // trae los que tengan el atributo required
     // console.log($inputs)
@@ -45,21 +45,34 @@ export default function contactFormValidations() {
     //aqui es donde cargara el formulario
     $form.addEventListener("submit", (e) => {
         //hay que desactivar el prevent default para que se pueda enviar realmente el correo.
-        // //e.preventDefault();  //muy umportante prevenir el comportamiento por default
+        e.preventDefault();  //muy umportante prevenir el comportamiento por default
         // alert("Enviando Formulario");
-        console.log("formsubmit event");
+        // console.log("formsubmit event");
         const $loader = d.querySelector(".contact-form-loader"), // aqui atrapamos el nodo del loader que es la imagen  que muestra carga
             $response = d.querySelector(".contact-form-response"); //aqui atrapamos el nodo del texto de respuesta de envio
         $loader.classList.remove("none"); // removemos el none, para que ahora si se vea el loader.
 
-
-        // con este set time out simulamos una peticion ajax
-        setTimeout(() => {
-            $loader.classList.add("none"); // estamos jugando con mostrar y no mostrar el loader y la respuesta para simular el llamado ajax
-            $response.classList.remove("none");
-            $form.reset(); // se resetea el formulario.
-            setTimeout(() => $response.classList.add("none"), 3000); //metemos un segundo tiempo de espera
-        }, 3000);
+        fetch("https://formsubmit.co/ajax/jhonnnario@gmail.com", {
+            method: "POST",
+            body: new FormData(e.target) // parsea los elementos que vienen en los input del form, los cuales tienen que tener su atributo name establecido
+        })
+            .then(res => res.ok ? res.json() : Promise.reject(res))
+            .then(json => {
+                console.log(json);
+                $loader.classList.add("none"); // estamos jugando con mostrar y no mostrar el loader y la respuesta para simular el llamado ajax
+                $response.classList.remove("none");
+                $response.innerHTML = `<p>${json.message}</p>`;
+                $form.reset(); // se resetea el formulario.
+            })
+            .catch(err => {
+                console.log(err);
+                let message = err.status.Text || "Hubo un error, intenta otra vez";
+                $response.innerHTML = `<p> Error ${err.status}:${message} </p>`;
+            })
+            .finally(() => setTimeout(() => {
+                $response.classList.add("none");
+                $response.innerHTML = "";
+            }, 5000));
     });
 
 }

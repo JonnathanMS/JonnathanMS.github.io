@@ -1,3 +1,4 @@
+import { ocultar } from '../dom/mostrarOcultar.js';
 const d = document, n = navigator, ua = n.userAgent;
 // *navigator:
 // muestra todo acerca del navegador o dispositivo que abrio la página.
@@ -52,12 +53,13 @@ export default function userDeviceInfo(id) {
     // //CONTENIDO EXCLUSIVO:
     if (isBrowser.chrome()) {
         $id.innerHTML += `<p><mark>Este contenido solo se ve en Chrome</mark></p>`
+
     }
     if (isBrowser.firefox()) {
         $id.innerHTML += `<p><mark>Este contenido solo se ve en firefox</mark></p>`
     }
-    // //REDIRECCIONAMIENTO
-    // if (isMobile.android()) {
-    //     window.location.href = "";
-    // }
+    //Cuando es celular oculato las funciones que no se manejan en android
+    if (isMobile.android()) {
+        ocultar(".ocultarMobile");
+    }
 }

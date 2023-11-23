@@ -15,7 +15,7 @@ import draw from "./dom/sorteo.js";
 import slider from "./dom/carrusel.js";
 import scrollSpy from "./dom/scroll_espia.js";
 import smartVideo from "./dom/video_inteligente.js";
-import contactFormValidations from "./dom/validaciones_formulario.js";
+import contactFormAjax from "./dom/validaciones_formulario_ajax.js";
 import speechReader from "./dom/narrador.js";
 import videoSelect from "./dom/videoSeleccion.js";
 import mensajeModal from "./dom/modal.js";
@@ -50,8 +50,8 @@ d.addEventListener("DOMContentLoaded", (e) => { // esto permite que cargue el do
     slider();
     scrollSpy();
     smartVideo(); // En este caso no damos parametros porque vamos a usar el data-atribute.
-    contactFormValidations();
     formCountdown();
+    contactFormAjax();
 })
 //https://emojipedia.org/es/  AQUI PUEDO SACAR EMOTICONES POR BÚSQUEDA.
 // Con este código vamos a detectar los shortcuts que se tecleen cuando este posado sobre el viewport (Interfaz de usuario)
@@ -61,6 +61,7 @@ d.addEventListener("keydown", (e) => { //El evento keydown es cuando se teclea u
     shortcuts(e);
     moveBall(e, ".ball", ".stage");
 });
+// d.addEventListener("DOMContentLoaded", contactFormAjax);
 
 darkTheme(".dark-theme-btn", "dark-mode"); // se quito de arriba y se puso aqui afuera del DOMContentLoaded, porque se llamo otro evento DOMContentLoaded para usar el localStorage
 networkStatus();
