@@ -648,7 +648,7 @@ select option {
 .animated-text {
   display: inline-block;
   white-space: nowrap; /* Evita el salto de línea */
-  animation: slideLeft 12s linear infinite; /* Aplica la animación */
+  animation: slideLeft 18s linear infinite; /* Aplica la animación */
 }
 
 @keyframes slideLeft {
