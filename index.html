@@ -17,8 +17,8 @@
     <header class="header">
       <center>
         <h1 class="animated-text">Portafolio 1: Jonnathan Monroy 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a href="https://portafolio2jonnathan2023.000webhostapp.com/" style="color:var(--main-color)" target="_blank">Ver sitio web(React, Vite)</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a href="https://nuevobackend.onrender.com" style="color:var(--main-color)" target="_blank">Ver api (Nodejs, Express)</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a href="https://portafolio2jonnathan2023.000webhostapp.com/" style="color:var(--main-color)" target="_blank">Ver sitio web(Frontend:React, Vite)</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a href="https://nuevobackend.onrender.com" style="color:var(--main-color)" target="_blank">Ver api Backend(Nodejs, Express)</a>
         </h1>
       </center>
     </header>
@@ -45,7 +45,7 @@
         <a href="#seccion8" data-scroll-spy>Detección de la cámara web</a>
         <a href="#seccion9" data-scroll-spy>Geolocalización</a>
         <a href="#seccion11" data-scroll-spy>Sorteo Digital</a>
-        <a href="#seccion13" data-scroll-spy>Reloj Digital y Alarma sonora</a>
+        <a href="#seccion13" data-scroll-spy>Reloj Digital</a>
         <a href="#seccion14" data-scroll-spy>Escríbeme tus comentarios y sugerencias</a>
       </nav>
     </aside>
@@ -117,6 +117,11 @@
           <!-- Lista desplegable con opciones de videos -->
           <select id="videoSelect" class="transparent-input">
             <option>Selecciona un video</option>
+            <option
+              value='<iframe class="iframe-responsivo" src="https://www.youtube.com/embed/t6mlhddtpSU" title="Node, express, javaScript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+            >
+              Backend, instrucciones de uso del api.
+            </option>
             <option
               value='<iframe class="iframe-responsivo" src="https://www.youtube.com/embed/5ox9MNQqrb0" title="Node, express, javaScript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
             >
@@ -230,7 +235,7 @@
           </figure>
           <figure class="card rebotar">
             <a
-              href="https://github.com/JonnathanMS/Portafolio2ProduccionBackend/tree/main/Backend/src"
+              href="https://github.com/JonnathanMS/nuevobacken/tree/main/src"
               target="_blank"
             >
               <img src="portafolio/assets/images/node.png" alt="NodeJS" />
@@ -248,7 +253,7 @@
           </figure>
                     <figure class="card">
             <a
-              href="https://github.com/JonnathanMS/Portafolio2ProduccionBackend/tree/main/Backend/src"
+              href="https://github.com/JonnathanMS/nuevobacken/tree/main/src"
               target="_blank"
             >
               <img
@@ -565,13 +570,13 @@
         <div class="textBox">
           <!-- <p id="reloj1">⌚</p> -->
           <img src="../../assets/gif/relojVerde.gif" alt="" class="gif" />
-          <h2>Hora y música de fondo:</h2>
+          <h2>Relej Digital:</h2>
           <div id="reloj"></div>
           <div>
             <button class="blue-btn" id="activar-reloj">Ver reloj</button>
             <button class="blue-btn" id="desactivar-reloj">Quitar reloj</button>
-            <button class="blue-btn" id="activar-alarma">Música</button>
-            <button class="blue-btn" id="desactivar-alarma">🔇</button>
+            <!-- <button class="blue-btn" id="activar-alarma">Música</button>
+            <button class="blue-btn" id="desactivar-alarma">🔇</button> -->
           </div>
           <!-- <audio src="../../assets/Comodo.mp3" controls></audio> -->
         </div>
