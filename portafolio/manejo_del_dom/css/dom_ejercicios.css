@@ -66,6 +66,14 @@ body {
 #a_fullStack {
   color: yellow;
 }
+
+#leaflet {
+  width: 15%;
+}
+
+#img_node_react {
+  width: 15%;
+}
 /* *menu-hamburguesa  ********************************************************************/
 
 .header {
@@ -474,27 +482,27 @@ body {
 
 @media screen and (max-height: 875px) {
   .menu a {
-    padding: 0.55rem;
+    padding: 0.5rem;
   }
 }
 @media screen and (max-height: 740px) {
   .menu a {
-    padding: 0.45rem;
+    padding: 0.4rem;
   }
 }
 @media screen and (max-height: 650px) {
   .menu a {
-    padding: 0.25rem;
+    padding: 0.2rem;
   }
 }
 @media screen and (max-height: 580px) {
   .menu a {
-    padding: 0.2rem;
+    padding: 0.15rem;
   }
 }
 @media screen and (max-height: 530px) {
   .menu a {
-    padding: 0.8rem;
+    padding: 0.5rem;
   }
 }
 @media screen and (max-height: 461px) {
