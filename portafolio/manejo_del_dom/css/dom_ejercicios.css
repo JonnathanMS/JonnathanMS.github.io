@@ -63,7 +63,9 @@ body {
   background-position: center;
   /* cursor: url(""); */
 }
-
+#a_fullStack {
+  color: yellow;
+}
 /* *menu-hamburguesa  ********************************************************************/
 
 .header {
@@ -472,27 +474,27 @@ body {
 
 @media screen and (max-height: 875px) {
   .menu a {
-    padding: 0.6rem;
+    padding: 0.55rem;
   }
 }
 @media screen and (max-height: 740px) {
   .menu a {
-    padding: 0.5rem;
+    padding: 0.45rem;
   }
 }
 @media screen and (max-height: 650px) {
   .menu a {
-    padding: 0.3rem;
+    padding: 0.25rem;
   }
 }
 @media screen and (max-height: 580px) {
   .menu a {
-    padding: 0.25rem;
+    padding: 0.2rem;
   }
 }
 @media screen and (max-height: 530px) {
   .menu a {
-    padding: 0.1rem;
+    padding: 0.8rem;
   }
 }
 @media screen and (max-height: 461px) {

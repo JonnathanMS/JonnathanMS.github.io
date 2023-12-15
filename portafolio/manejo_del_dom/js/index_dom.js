@@ -25,7 +25,7 @@ const d = document;
 d.addEventListener("DOMContentLoaded", (e) => { // esto permite que cargue el dom antes de ejecutar la funcion que esta dentro.
     hamburgerMenu(".panel-btn", ".panel", ".menu a");
     digitalClock("#reloj", "#activar-reloj", "#desactivar-reloj");
-    alarm("../../assets/Comodo.mp3", "#activar-alarma", "#desactivar-alarma");
+    alarm("./dom/Comodo.mp3", "#activar-alarma", "#desactivar-alarma");
     scrollTopButton(".scroll-top-btn");
     // darkTheme(".dark-theme-btn","dark-mode"); // se quito de aqui y se puso mas abajo afuera del DOMContentLoaded, porque se llamo otro evento DOMContentLoaded para usar el localStorage
     responsiveMedia(
