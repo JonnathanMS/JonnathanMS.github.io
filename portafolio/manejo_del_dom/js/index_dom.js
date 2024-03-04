@@ -29,6 +29,12 @@ d.addEventListener("DOMContentLoaded", (e) => { // esto permite que cargue el do
     scrollTopButton(".scroll-top-btn");
     // darkTheme(".dark-theme-btn","dark-mode"); // se quito de aqui y se puso mas abajo afuera del DOMContentLoaded, porque se llamo otro evento DOMContentLoaded para usar el localStorage
     responsiveMedia(
+        "visor2",
+        "(min-width: 1024px)",
+        '<center><div class="blue-link"><a href="../../../portafolio/qgisLeaflet/sitios_turisticos_2/index.html" target="_blank">ver Mapa</a></div></center>',
+        '<iframe src="../../../portafolio/qgisLeaflet/sitios_turisticos_2/index.html" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+    );
+    responsiveMedia(
         "youtube",
         "(min-width: 1024px)",
         '<center><div class="blue-link"><a href="https://www.youtube.com/watch?v=l_hxsfd9Uto" target="_blank">ver video en youtube</a></div></center>',
